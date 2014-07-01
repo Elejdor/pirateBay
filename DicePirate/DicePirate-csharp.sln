@@ -5,6 +5,8 @@ Project("{80E198A9-8304-C607-E533-70FBF95E2947}") = "DicePirate", "Assembly-CSha
 EndProject
 Project("{80E198A9-8304-C607-E533-70FBF95E2947}") = "DicePirate", "Assembly-CSharp-vs.csproj", "{1970BDD9-EF33-3186-5FBA-F2436F4E5123}"
 EndProject
+Project("{80E198A9-8304-C607-E533-70FBF95E2947}") = "DicePirate", "Assembly-CSharp-Editor-vs.csproj", "{1A6DD172-DAF3-F72E-FA86-CC616ADC7BDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{1970BDD9-EF33-3186-5FBA-F2436F4E5123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1970BDD9-EF33-3186-5FBA-F2436F4E5123}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1970BDD9-EF33-3186-5FBA-F2436F4E5123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A6DD172-DAF3-F72E-FA86-CC616ADC7BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A6DD172-DAF3-F72E-FA86-CC616ADC7BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A6DD172-DAF3-F72E-FA86-CC616ADC7BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A6DD172-DAF3-F72E-FA86-CC616ADC7BDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																		GlobalSection(MonoDevelopProperties) = preSolution
+																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

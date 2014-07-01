@@ -4,11 +4,11 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    private float rotationSpeed = 50;
+    private float rotationSpeed = 40;
     public float velocity = 0;
     private float maxSpeed = 8;
 
-    private float Leap = 0;
+    private float Lean = 0;
     private float RotationRate = 0;
     public List<ParticleSystem> frontParticles;
     private bool frontParticlesPlayed = false;
@@ -26,28 +26,32 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         velocity = maxSpeed;
-        Leap = 0;
+        Lean = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (!useDicepl)
+
+        if (Input.GetKey(KeyCode.A))
         {
-            if (Input.GetKey(KeyCode.A))
+            Lean = -1;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            Lean = 1;
+        }
+        else
+        {
+            Lean = 0;
+            if (DicePlusAdapter.instance.DiceConnected)
             {
-                Leap = -1;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                Leap = 1;
-            }
-            else
-            {
-                Leap = 0;
+                Lean = DicePlusAdapter.instance.Lean;
             }
         }
+        
+
 
         if (changeWave)
         {
@@ -56,7 +60,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(wavesRandomizer());
         }
 
-        RotationRate = Mathf.Lerp(RotationRate, Leap, 0.01f);
+        RotationRate = Mathf.Lerp(RotationRate, Lean, 0.008f);
 
         ShipActor.transform.Rotate(new Vector3(0.0f, RotationRate * rotationSpeed * Time.deltaTime, 0));
 
